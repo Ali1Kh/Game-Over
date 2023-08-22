@@ -1,0 +1,139 @@
+* {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+:root {
+  --mainColor: #272b30;
+  --secondryColor: #3b487b;
+}
+.mainBg {
+  background-color: var(--mainColor);
+}
+body {
+  background-color: var(--mainColor);
+  overflow: hidden;
+}
+.textGray {
+  color: darkgrey;
+}
+
+.fs-7 {
+  font-size: 15px;
+}
+/* !Header*/
+header {
+  background-image: url(../imgs/wraper.png);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+}
+/* !Navbar */
+.navbar .container {
+  background-color: #3b487b;
+}
+.nav-item .nav-link {
+  color: white;
+  font-size: 14px;
+}
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: #09c !important;
+  transition: color 1s;
+}
+/*!Games*/
+.games .col .card .title p,
+.games .card-footer small {
+  background-color: var(--secondryColor);
+}
+.games .card-footer small {
+  font-size: 10px;
+}
+.games .card {
+  cursor: pointer;
+  transition: 500ms;
+  filter: grayscale(0.6);
+}
+.games .card:hover {
+  scale: 1.03;
+  filter: grayscale(0);
+}
+/*!Loading */
+.loading {
+  background-color: var(--mainColor);
+  z-index: 999;
+}
+.spinner {
+  margin: 100px auto;
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+.spinner > div {
+  background-color: white;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+/* !Scroll Design */
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--secondryColor) #ffffff;
+}
+*::-webkit-scrollbar {
+  width: 13px;
+}
+*::-webkit-scrollbar-track {
+  background: #343a41;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondryColor);
+  border-radius: 10px;
+}
