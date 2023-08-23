@@ -1,4 +1,4 @@
-import { pageLoaded} from "./index.js";
+import { pageLoaded } from "./index.js";
 export class gamesUi {
   constructor() {}
   displayData(data) {
@@ -30,7 +30,7 @@ export class gamesUi {
     });
   }
   displayDetails(details) {
-   this.detailsData = `
+    this.detailsData = `
    <div class="innerDetials">
   <div class="col-md-4">
                     <div class="gameImage p-2">
