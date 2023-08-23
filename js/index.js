@@ -1,15 +1,11 @@
 import { gamesData } from "./home.js";
-import { gameDetailes } from "./details.js";
 new gamesData();
 export function loadPage() {
-  $(".loading").fadeIn(1000, function () {
-    $(".loading").addClass("d-flex");
-      $(".loading").removeClass("d-none");
-      $("body").css("overflow", "hidden");
-    $(".spinner").fadeIn(1000, function () {
-    
-    });
-  });
+  $(".loading").fadeIn();
+  $(".spinner").fadeIn();
+  $(".loading").addClass("d-flex");
+  $(".loading").removeClass("d-none");
+  $("body").css("overflow", "hidden");
 }
 export function pageLoaded() {
   $(".spinner").fadeOut(1000, function () {
@@ -23,4 +19,3 @@ export function pageLoaded() {
 $("document").ready(() => {
   pageLoaded();
 });
-

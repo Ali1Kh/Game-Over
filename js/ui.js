@@ -1,4 +1,4 @@
-import { pageLoaded } from "./index.js";
+import { pageLoaded} from "./index.js";
 export class gamesUi {
   constructor() {}
   displayData(data) {
@@ -31,6 +31,7 @@ export class gamesUi {
   }
   displayDetails(details) {
    this.detailsData = `
+   <div class="innerDetials">
   <div class="col-md-4">
                     <div class="gameImage p-2">
                         <img class="w-100" src="${details.thumbnail}" alt="">
@@ -46,9 +47,11 @@ export class gamesUi {
                         <button id="showGame" class="btn border-2"><a class="text-white text-decoration-none" href="${details.game_url}" target="_blank">Show Game</a></button>
                     </div>
                 </div>
+                </div>
   `;
-
     $(".details .row").html(this.detailsData);
-    
+    $(".details .row .innerDetials").ready(() => {
+      pageLoaded();
+    });
   }
 }

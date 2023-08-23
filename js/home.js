@@ -28,6 +28,7 @@ export class gamesData {
   }
   sendId() {
     $(".games .row .card").click((e) => {
+      loadPage();
       $(".details").addClass("d-block");
       $(".details").removeClass("d-none");
       $(".home").removeClass("d-block");

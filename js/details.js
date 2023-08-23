@@ -1,12 +1,14 @@
-// import { loadPage } from "./index.js";
+import { loadPage,pageLoaded} from "./index.js";
 import { gamesUi } from "./ui.js";
 export class gameDetailes {
   constructor(id) {
     $(".close").click(()=>{
+      loadPage();
      $(".details").addClass("d-none");
      $(".details").removeClass("d-block");
      $(".home").removeClass("d-none");
      $(".home").addClass("d-block");
+     pageLoaded();
     })
     this.ui = new gamesUi();
     this.getDetails(id);
