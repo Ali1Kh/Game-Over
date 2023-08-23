@@ -5,7 +5,7 @@ export class gamesUi {
     this.uiData = ``;
     for (let i = 0; i < data.length; i++) {
       this.uiData += `
-  <div class="col">
+  <div class="col-md-6 col-lg-4 col-xl-3">
                   <div class="card mainBg border-1 shadow h-100" data-id="${data[i].id}">
                       <div class="inner p-3 rounded-4">
                       <img src="${data[i].thumbnail}" class="card-img-top" alt="...">
