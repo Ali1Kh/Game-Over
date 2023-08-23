@@ -57,6 +57,19 @@ header {
   scale: 1.03;
   filter: grayscale(0);
 }
+/* !Details */
+
+#showGame{
+  border-color: var(--secondryColor) !important;
+  transition: all 0.5s
+}
+#showGame:hover{
+  background-color: var(--secondryColor) !important;
+}
+.details .inner p span{
+  background-color: var(--secondryColor);
+}
+
 /*!Loading */
 .loading {
   background-color: var(--mainColor);

@@ -18,49 +18,62 @@
 </head>
 
 <body>
-    <header></header>
-    <nav class="navbar navbar-expand-lg position-sticky z-2 top-0 mb-3">
-        <div class="container rounded-4 px-3 py-2">
-            <a class="navbar-brand fs-4 d-flex align-items-center gap-2 text-white">
-                <img src="imgs/logo6.png" alt="Logo" width="45" class="d-inline-block align-text-top">
-                Games
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-category="mmorpg" role="button" aria-current="page">MMORPG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-category="shooter" role="button">SHOOTER</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-category="sailing" role="button">SAILING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-category="permadeath" role="button">PERMADEATH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-category="superhero" role="button">SUPERHERO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-category="pixel" role="button">PIXEL</a>
-                    </li>
+    <div class="home">
+        <header></header>
+        <nav class="navbar navbar-expand-lg position-sticky z-2 top-0 mb-3">
+            <div class="container rounded-4 px-3 py-2">
+                <a class="navbar-brand fs-4 d-flex align-items-center gap-2 text-white">
+                    <img src="imgs/logo6.png" alt="Logo" width="45" class="d-inline-block align-text-top">
+                    Games
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-category="mmorpg" role="button"
+                                aria-current="page">MMORPG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="shooter" role="button">SHOOTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="sailing" role="button">SAILING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="permadeath" role="button">PERMADEATH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="superhero" role="button">SUPERHERO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-category="pixel" role="button">PIXEL</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <section class="games">
-        <div class="container p-3">
-            <div class="row row-cols-1 row-cols-md-4 g-4"></div>
+        </nav>
+        <section class="games">
+            <div class="container p-3">
+                <div class="row row-cols-1 row-cols-md-4 g-4"></div>
+            </div>
+        </section>
+    </div>
+    <section class="details d-none py-5">
+        <div class="container">
+            <div class="header textGray d-flex justify-content-between mb-5">
+                <h5>Details Game</h5>
+                <button class="border-0 bg-transparent"><i class="close fs-3 textGray fa fa-xmark"></i></button>
+            </div>
+            <div class="row"></div>
         </div>
     </section>
 
-    <section class="loading d-flex align-items-center position-fixed top-0 bottom-0 start-0 end-0">
+    <!-- <section class="loading d-flex align-items-center position-fixed top-0 bottom-0 start-0 end-0">
         <div class="spinner">
             <div class="rect1"></div>
             <div class="rect2"></div>
@@ -68,7 +81,7 @@
             <div class="rect4"></div>
             <div class="rect5"></div>
         </div>
-    </section>
+    </section> -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>

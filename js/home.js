@@ -1,16 +1,17 @@
-import { gamesUi } from "./games.js";
-// import { loadPage } from "./index.js";
+import { loadPage } from "./index.js";
+import { gamesUi } from "./ui.js";
+import { gameDetailes } from "./details.js";
 export class gamesData {
   constructor() {
     this.getData("mmorpg");
-    this.games = new gamesUi();
+    this.ui = new gamesUi();
     $(".nav-link").click((e) => {
       $(".nav-link.active").removeClass("active");
       $(e.target).addClass("active");
+      loadPage();
       this.getData($(e.target).attr("data-category"));
     });
   }
-
   async getData(category) {
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
     const options = {
@@ -21,7 +22,19 @@ export class gamesData {
       },
     };
     const response = await fetch(url, options);
-    const result = await response.json();
-    this.games.displayData(result);
+    this.result = await response.json();
+    this.ui.displayData(this.result);
+    this.sendId();
+  }
+  sendId() {
+    $(".games .row .card").click((e) => {
+      $(".details").addClass("d-block");
+      $(".details").removeClass("d-none");
+      $(".home").removeClass("d-block");
+      $(".home").addClass("d-none");
+      this.id = $($(e.target).parents(".card")).attr("data-id");
+      console.log(this.id);
+      this.details = new gameDetailes(this.id);
+    });
   }
 }
