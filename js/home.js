@@ -3,17 +3,21 @@ import { gamesUi } from "./ui.js";
 import { gameDetailes } from "./details.js";
 export class gamesData {
   constructor() {
-    this.getData("mmorpg");
+    this.getData("");
     this.ui = new gamesUi();
     $(".nav-link").click((e) => {
       $(".nav-link.active").removeClass("active");
       $(e.target).addClass("active");
       loadPage();
+
       this.getData($(e.target).attr("data-category"));
     });
   }
   async getData(category) {
-    const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
+    let categoryVar
+    if (category!="") categoryVar = `?category=${category}`;
+    else categoryVar="";
+    const url = `https://free-to-play-games-database.p.rapidapi.com/api/games${categoryVar}`;
     const options = {
       method: "GET",
       headers: {
@@ -23,6 +27,7 @@ export class gamesData {
     };
     const response = await fetch(url, options);
     this.result = await response.json();
+    console.log(this.result);
     this.ui.displayData(this.result);
     this.sendId();
   }
